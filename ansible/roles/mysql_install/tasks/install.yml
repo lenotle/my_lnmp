@@ -1,6 +1,8 @@
+- name: update yum
+  shell: yum update -y
 - name: 移除mysql
   shell: yum -y remove mysql
 - name: 安装mysql
-  shell: yum install -y mysql mysql-server 
+  shell: yum install -y mysql && yum install -y mysql-server
 - name: 启动mysql服务
-  shell: systemctl enable mysqld && systemctl start mysqld
+  shell: systemctl start mysqld.service
