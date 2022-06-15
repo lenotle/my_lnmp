@@ -1,5 +1,5 @@
 - name: 安装wget
-- shell: yum install -y wget
+  shell: yum install -y wget
 - name: 安装 yum repo
   shell: wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
 - name: 安装repo
