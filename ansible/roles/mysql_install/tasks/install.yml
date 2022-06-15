@@ -1,12 +1,8 @@
-- name: download wget 
-  shell: yum install wget -y 
-- name: get mysql57-community-release-el7-10.noarch.rpm
-  shell: wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm 
-- name: 下载所需要的rpm包
-  shell: rpm -ivh mysql-community-release-el7-5.noarch.rpm
-- name:  mysql-community-server
-  shell: yum -y install mysql-community-server 
-- name: mysql-server
-  shell: yum install mysql-server　　-y
+- name: 安装 yum repo
+  shell: wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+- name: 安装repo
+  shell: rpm -ivh mysql57-community-release-el7-9.noarch.rpm
+- name:  安装mysql-server
+  shell: cd /etc/yum.repos.d/ &&  rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022   &&yum install -y mysql-server
 - name: 启动mysql服务
   shell: systemctl enable mysqld && systemctl start mysqld
