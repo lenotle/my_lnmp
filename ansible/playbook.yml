@@ -1,5 +1,5 @@
 ---
-- hosts: web02
+- hosts: localhost
   remote_user: root
   gather_facts: True    
   roles:                
