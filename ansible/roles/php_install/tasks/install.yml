@@ -2,5 +2,3 @@
   shell: yum remove -y php*
 - name: install php-form
   shell: yum -y install php-fpm
-- name: auto 
-  shell: systemctl enable php-fpm && systemctl start php-fpm
