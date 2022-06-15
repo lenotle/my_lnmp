@@ -37,12 +37,11 @@ resource "alicloud_instance" "instance" {
   # series III
   instance_type              = "ecs.n2.small"
   system_disk_category       = "cloud_efficiency"
-  image_id                   = "centos_8_5_x64_20G_alibase_20220428.vhd"
+  image_id                   = "centos_7_9_x64_20G_alibase_20201228.vhd"
   instance_name              = "test_foo"
   vswitch_id                 = alicloud_vswitch.vsw.id
   internet_max_bandwidth_out = 10
   password                   = "skyhellode123.."
-  private_ip                 = "172.16.0.10"
 }
 
 resource "alicloud_security_group_rule" "allow_all_tcp" {
