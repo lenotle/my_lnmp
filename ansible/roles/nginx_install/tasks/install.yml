@@ -1,5 +1,5 @@
 - name: 安装yum源
-  shell: yum -y install epel-release && yum update
+  shell: yum -y install epel-release && yum update -y
 - name: 安装nginx
   shell: yum install -y nginx
 - name: 拷贝配文文件
