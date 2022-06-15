@@ -1,8 +1,6 @@
 - name: 安装nginx
   shell: yum install -y nginx
 - name: 拷贝配文文件
-  template: src=nginx.conf dest=/etc/nginx/nginx.conf
+  copy: src=nginx.conf dest=/etc/nginx/nginx.conf
 - name: 拷贝php测试文件
-  template: src=index.php dest=/usr/share/nginx/html/index.php
-- name: 启动nginx
-  shell: sysemctl start nginx
+  copy: src=index.php dest=/usr/share/nginx/html/index.php
