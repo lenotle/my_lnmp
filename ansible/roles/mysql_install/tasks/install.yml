@@ -2,7 +2,11 @@
   shell: yum update -y
 - name: 移除mysql
   shell: yum -y remove mysql
-- name: 安装mysql
-  shell: yum install -y mysql && yum install -y mysql-server
+- name: get mysql57-community-release-el7-10.noarch.rpm
+  shell: wget -i -c http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm
+- name: 下载所需要的rpm包
+  shell: yum -y install mysql57-community-release-el7-10.noarch.rpm
+- name: 安装mysql服务端
+  shell: yum -y install mysql-community-server
 - name: 启动mysql服务
-  shell: systemctl start mysqld.service
+  shell: systemctl start mysqld
