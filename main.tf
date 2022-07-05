@@ -9,8 +9,8 @@ terraform {
 
 provider "alicloud" {
   # Configuration options
-  access_key = "LTAI5tLx8a7JJQU2UBwNwDtm"
-  secret_key = "onYrXy31oxfD6ViYupskDdaHhFT22c"
+  access_key = "xxxx"
+  secret_key = "xxxx"
   region = "cn-shenzhen"
 }
 
